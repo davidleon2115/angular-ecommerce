@@ -21,13 +21,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/home/components/products/products.component';
+import { FiltersComponent } from './pages/home/components/filters/filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
