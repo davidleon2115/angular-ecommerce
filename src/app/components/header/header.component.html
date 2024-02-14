@@ -1,8 +1,12 @@
-<mat-toolbar class="justify-between max-w-7xl mx-auto border-x bg-emerald-500">
-  <a routerLink="home" class="text-white">Shop</a>
-  <button mat-icon-button [mat-menu-trigger-for]="menu" class="text-white">
-    <mat-icon [matBadge]="1" matBadgeColor="warn">shopping_cart</mat-icon>
-  </button>
+<mat-toolbar class="bg-emerald-500">
+  <div class="flex justify-between mx-auto w-[80rem]">
+    <a routerLink="home" class="text-white">Shop</a>
+    <button mat-icon-button [mat-menu-trigger-for]="menu" class="text-white">
+      <mat-icon [matBadge]="1" aria-hidden="false" matBadgeColor="warn"
+        >shopping_cart</mat-icon
+      >
+    </button>
+  </div>
   <mat-menu #menu="matMenu">
     <div class="p-3 divide-y divide-solid">
       <div class="pb-3 flex justify-between">

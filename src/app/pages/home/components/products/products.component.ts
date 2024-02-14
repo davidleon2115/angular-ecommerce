@@ -21,4 +21,5 @@ export class ProductsComponent {
   onColumnsUpdated(columnNumber : number) : void {
     this.columnsCountChange.emit(columnNumber);
   }
+
 }

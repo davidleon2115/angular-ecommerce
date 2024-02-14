@@ -1,0 +1,50 @@
+<mat-card class="text-center p-10">
+  <div *ngIf="colState !== 1; else elseBlock">
+    <img
+      class="mb-1 mx-auto h-[200px] w-[200px]"
+      src="https://via.placeholder.com/150"
+      alt=""
+    />
+    <div>
+      <h5>Shoes</h5>
+      <p class="truncate hover:whitespace-normal">Snicker</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
+        temporibus eos ex similique reprehenderit
+      </p>
+    </div>
+    <div class="flex justify-between">
+      <span class="text-red-400"> {{ 150000 | currency }} </span>
+      <button>
+        <mat-icon class="text-green-600">add_shopping_cart</mat-icon>
+      </button>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div class="flex">
+      <img
+        class="mb-1 mx-auto sm:h-[200px] sm:w-[200px] h-[100px] flex self-center"
+        src="https://via.placeholder.com/150"
+        alt=""
+      />
+      <div class="mx-4 md:mx-10 relative max-h-64 lg:mx-28">
+        <div
+          class="flex flex-col items-start min-h-24 max-h-40 overflow-y-hidden mb-7"
+        >
+          <h5>Shoes</h5>
+          <p class="truncate hover:whitespace-normal">Snicker</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
+            temporibus eos ex similique reprehenderit
+          </p>
+        </div>
+        <div class="flex justify-between absolute bottom-0 left-0 right-0">
+          <span class="text-red-400"> {{ 150000 | currency }} </span>
+          <button>
+            <mat-icon class="text-green-600">add_shopping_cart</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</mat-card>
