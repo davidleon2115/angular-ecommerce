@@ -1,4 +1,4 @@
-<mat-card class="text-center p-10">
+<mat-card class="text-center py-20" [class]="colState == 1 ? 'py-10' : 'py-20'">
   <div *ngIf="colState !== 1; else elseBlock">
     <img
       class="mb-1 mx-auto h-[200px] w-[200px]"
@@ -23,7 +23,7 @@
   <ng-template #elseBlock>
     <div class="flex">
       <img
-        class="mb-1 mx-auto sm:h-[200px] sm:w-[200px] h-[100px] flex self-center"
+        class="mb-1 mx-auto ml-5 md:ml-20 sm:h-[200px] sm:w-[200px] h-[100px] flex self-center"
         src="https://via.placeholder.com/150"
         alt=""
       />

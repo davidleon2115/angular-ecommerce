@@ -2,21 +2,24 @@
   [autosize]="true"
   class="min-h-full max-w-7xl mx-auto border-x bg-gray-100"
 >
-  <mat-drawer mode="side" opened class="p-6" class="bg-gray-100">
+  <mat-drawer #drawer mode="side" opened class="p-6" class="bg-gray-100">
     <app-filters (onFilter)="onShowCategory($event)"></app-filters>
   </mat-drawer>
   <mat-drawer-content class="p-6">
     <app-products
       (columnsCountChange)="onColumnsCountChange($event)"
     ></app-products>
+    <button class="mb-5" mat-raised-button (click)="drawer.toggle()">
+      Toggle
+    </button>
     <mat-grid-list
       [cols]="cols"
       [rowHeight]="rowHeight"
-      [gutterSize]="cols !== 1 ? '16' : '0'"
+      [gutterSize]="cols !== 1 ? '16' : '10'"
     >
       <mat-grid-tile
+        style="background-color: rgb(22, 124, 213)"
         *ngFor="let _ of [1, 2, 3, 4, 5, 6, 7, 8, 9]"
-        class="custom-grid-tile-content"
       >
         <app-product-box [colState]="colsNum"></app-product-box>
       </mat-grid-tile>
