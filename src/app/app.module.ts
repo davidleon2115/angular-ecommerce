@@ -20,12 +20,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 //components
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ProductsComponent } from './pages/home/components/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
