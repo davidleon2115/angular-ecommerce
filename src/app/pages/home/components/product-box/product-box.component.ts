@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductBoxComponent {
   @Input() colState: number | undefined;
+  @Input() fullWidthMode = false;
 }
