@@ -1,0 +1,11 @@
+.mat-column-action{
+    width: 50px !important;
+    border-left: 1px solid;
+    padding: 0 !important;
+
+}
+
+.mat-column-total{
+    width: 90px !important;
+    border-left: 1px solid;
+}

@@ -14,6 +14,13 @@ export class CartComponent {
       price : 150000,
       quantity : 1,
       id: 1
+    },
+    {
+      product : 'https://via.placeholder.com/150',
+      name : 'Snicker',
+      price : 15000000000,
+      quantity : 1,
+      id: 1
     }
   ]}
   dataSource : Array<CartItem> = [];
@@ -22,10 +29,19 @@ export class CartComponent {
     'name',
     'price',
     'quantity',
+    'total',
     'action'
   ]
 
   ngOnInit(): void {
     this.dataSource = this.cart.items;
+  }
+
+  getTotal(items : Array<CartItem>) : number{
+    return items.map(
+      (item)=>item.price * item.quantity
+    ).reduce(
+      (accumulator, currentValue) => accumulator + currentValue, 0
+    )
   }
 }
