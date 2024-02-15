@@ -19,10 +19,10 @@ export class CartComponent {
   dataSource : Array<CartItem> = [];
   displayedColumns : Array<string> = [
     'product',
-    // 'name',
-    // 'price',
-    // 'quantity',
-    // 'action'
+    'name',
+    'price',
+    'quantity',
+    'action'
   ]
 
   ngOnInit(): void {
