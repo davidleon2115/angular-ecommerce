@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Cart, CartItem } from '../../interfaces/cart.model';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,6 +8,9 @@ import { Cart, CartItem } from '../../interfaces/cart.model';
   styleUrl: './cart.component.css'
 })
 export class CartComponent {
+
+  constructor(private cartService : CartService) { }
+
   cart : Cart = { items : [
     {
       product : 'https://via.placeholder.com/150',
@@ -73,10 +77,6 @@ export class CartComponent {
   }
 
   getTotal(items : Array<CartItem>) : number{
-    return items.map(
-      (item)=>item.price * item.quantity
-    ).reduce(
-      (accumulator, currentValue) => accumulator + currentValue, 0
-    )
+    return this.cartService.getTotal(items)
   }
 }

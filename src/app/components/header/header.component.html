@@ -5,7 +5,11 @@
       <span class="my-auto font-bold text-2xl">SHOPPING FACE</span>
     </a>
     <button mat-icon-button [mat-menu-trigger-for]="menu" class="text-white">
-      <mat-icon [matBadge]="1" aria-hidden="false" matBadgeColor="warn"
+      <mat-icon
+        [matBadge]="itemsQuantity"
+        [matBadgeHidden]="!itemsQuantity"
+        aria-hidden="false"
+        matBadgeColor="warn"
         >shopping_cart</mat-icon
       >
     </button>
@@ -13,25 +17,18 @@
   <mat-menu #menu="matMenu">
     <div class="p-3 divide-y divide-solid">
       <div class="pb-3 flex justify-between">
-        <span class="mr-16">1 Item</span>
+        <span class="mr-16">{{ itemsQuantity }}</span>
         <a routerLink="cart">View Cart</a>
       </div>
-      <div class="py-2">
-        <div class="flex justify-between font-light mb-4">
-          Keyboard x 1
-          <span class="font-bold pl-3">{{ "15000" | currency }}</span>
-        </div>
-        <div class="flex justify-between font-light mb-4">
-          Keyboard x 1
-          <span class="font-bold pl-3">{{ "15000" | currency }}</span>
-        </div>
-        <div class="flex justify-between font-light mb-4">
-          Keyboard x 1
-          <span class="font-bold pl-3">{{ "15000" | currency }}</span>
-        </div>
-        <div class="flex justify-between font-light mb-4">
-          Keyboard x 1
-          <span class="font-bold pl-3">{{ "15000" | currency }}</span>
+      <div *ngIf="cart.items" class="py-2">
+        <div
+          *ngFor="let item of cart.items"
+          class="flex justify-between font-light mb-4"
+        >
+          {{ item.name }} x {{ item.quantity }}
+          <span class="font-bold pl-3">{{
+            getTotal(cart.items) | currency
+          }}</span>
         </div>
       </div>
       <div class="flex justify-between font-light">

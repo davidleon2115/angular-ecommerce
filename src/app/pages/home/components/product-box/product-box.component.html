@@ -1,26 +1,5 @@
 <mat-card class="text-center py-20" [class]="colState == 1 ? 'py-15' : 'py-20'">
   <div *ngIf="colState !== 1; else elseBlock">
-    <!-- <img
-      class="mb-1 mx-auto h-[200px] w-[200px]"
-      src="https://via.placeholder.com/150"
-      alt=""
-    />
-    <div class="mx-4 relative">
-      <div>
-        <h5>Shoes</h5>
-        <p class="truncate hover:whitespace-normal">Snicker</p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-          temporibus eos ex similique reprehenderit
-        </p>
-      </div>
-      <div class="flex justify-between absolute bottom-0 left-0 right-0">
-        <span class="text-red-400"> {{ 150000 | currency }} </span>
-        <button>
-          <mat-icon class="text-green-600">add_shopping_cart</mat-icon>
-        </button>
-      </div>
-    </div> -->
     <div class="">
       <img
         class="mb-1 mx-auto h-[200px] w-[200px]"
@@ -41,7 +20,7 @@
         </div>
         <div class="flex justify-between absolute bottom-0 left-0 right-0">
           <span class="text-red-400"> {{ 150000 | currency }} </span>
-          <button>
+          <button (click)="onAddToCart()">
             <mat-icon class="text-green-600">add_shopping_cart</mat-icon>
           </button>
         </div>
@@ -68,7 +47,7 @@
         </div>
         <div class="flex justify-between absolute bottom-0 left-0 right-0">
           <span class="text-red-400"> {{ 150000 | currency }} </span>
-          <button>
+          <button (click)="onAddToCart()">
             <mat-icon class="text-green-600">add_shopping_cart</mat-icon>
           </button>
         </div>
