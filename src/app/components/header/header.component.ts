@@ -31,8 +31,8 @@ export class HeaderComponent {
     return this.cartService.getTotal(items)
   }
 
-  onCrearCart() : void {
-
+  onClearCart() : void {
+    this.cartService.clearCart();
   }
 
 }

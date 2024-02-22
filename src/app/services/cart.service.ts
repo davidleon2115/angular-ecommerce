@@ -22,7 +22,7 @@ export class CartService {
     }
 
     this.cart.next({ items });
-    this._snackBar.open('1 item added to cart.', 'Ok', { duration: 3000 });
+    this.showMessage(`${item.name} Product added to cart`);
     console.log(items)
   }
 
@@ -32,5 +32,19 @@ export class CartService {
     ).reduce(
       (accumulator, currentValue) => accumulator + currentValue, 0
     )
+  }
+
+  clearCart() : void {
+    this.cart.next({items:[]});
+    this.showMessage( "Your cart has been cleared.")
+  }
+
+  removeFromCart(item : CartItem) : void {
+    this.cart.value.items = this.cart.value.items.filter((_item) => _item !== item);
+    this.showMessage("1 Item removed from the cart.");
+  }
+
+  showMessage( message : string ) : void {
+    this._snackBar.open( message , 'Ok' , {duration : 3000})
   }
 }

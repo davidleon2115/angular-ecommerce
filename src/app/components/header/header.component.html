@@ -37,7 +37,10 @@
       </div>
       <div class="pt-3 flex justify-between">
         <div class="flex flex-col">
-          <button class="bg-red-600 mx-auto text-white rounded-full w-9 h-9">
+          <button
+            (click)="onClearCart()"
+            class="bg-red-600 mx-auto text-white rounded-full w-9 h-9"
+          >
             <mat-icon class="pt-1">remove_shopping_cart</mat-icon>
           </button>
           <p class="font-light">Remove Items</p>
