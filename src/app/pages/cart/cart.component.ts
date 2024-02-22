@@ -17,7 +17,7 @@ export class CartComponent {
     },
     {
       product : 'https://via.placeholder.com/150',
-      name : 'Snickergfdg dfg dfg df g df g dfsg sdf gfdg ',
+      name : 'Snicker',
       price : 15000,
       quantity : 1,
       id: 1

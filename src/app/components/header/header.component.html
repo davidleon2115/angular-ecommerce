@@ -1,6 +1,9 @@
-<mat-toolbar class="bg-emerald-500 z-50 fixed left-0 right-0">
+<mat-toolbar class="bg-cyan-500 z-50 fixed left-0 right-0">
   <div class="flex justify-between mx-auto w-[80rem]">
-    <a routerLink="home" class="text-white">Shop</a>
+    <a routerLink="home" class="text-white flex flex-row">
+      <mat-icon class="face-icon">face</mat-icon>
+      <span class="my-auto font-bold text-2xl">SHOPPING FACE</span>
+    </a>
     <button mat-icon-button [mat-menu-trigger-for]="menu" class="text-white">
       <mat-icon [matBadge]="1" aria-hidden="false" matBadgeColor="warn"
         >shopping_cart</mat-icon

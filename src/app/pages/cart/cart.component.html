@@ -13,20 +13,29 @@
         <img src="{{ element.product }}" alt="product" class="w-[100px] my-5" />
       </td>
       <td mat-footer-cell *matFooterCellDef>
-        <button mat-raised-button routerLink="/home">Continue Shopping</button>
+        <div class="flex flex-col w-44">
+          <button
+            mat-raised-button
+            routerLink="/home"
+            class="bg-green-600 text-white flex flex-row-reverse w-32"
+          >
+            <mat-icon class="ml-1">shopping_bag</mat-icon>
+            <span class="font-light">Shop</span>
+          </button>
+        </div>
       </td>
     </ng-container>
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Name</th>
       <td mat-cell class="text-wrap" *matCellDef="let element">
-        <p class="truncate text-wrap w-sm">{{ element.name }}</p>
+        <span class="truncate text-wrap w-sm">{{ element.name }}</span>
       </td>
       <td mat-footer-cell *matFooterCellDef></td>
     </ng-container>
     <ng-container matColumnDef="price">
       <th mat-header-cell *matHeaderCellDef>Price</th>
       <td mat-cell *matCellDef="let element">
-        <p class="truncate max-w-xs">{{ element.price | currency }}</p>
+        <span class="truncate max-w-xs">{{ element.price | currency }}</span>
       </td>
       <td mat-footer-cell *matFooterCellDef></td>
     </ng-container>
@@ -37,7 +46,7 @@
           <button>
             <mat-icon>remove_circle</mat-icon>
           </button>
-          <p class="truncate mt-2">{{ element.quantity }}</p>
+          <span class="truncate mt-1">{{ element.quantity }}</span>
           <button class="">
             <mat-icon>add_circle</mat-icon>
           </button>
@@ -48,9 +57,9 @@
     <ng-container matColumnDef="total">
       <th mat-header-cell *matHeaderCellDef class="">Total</th>
       <td mat-cell *matCellDef="let element">
-        <p class="truncate max-w-xs">
+        <span class="truncate max-w-xs">
           {{ element.quantity * element.price | currency }}
-        </p>
+        </span>
       </td>
       <td mat-footer-cell *matFooterCellDef>
         <span class="font-bold py-5 block">
@@ -67,7 +76,17 @@
           <mat-icon>close</mat-icon>
         </button>
       </td>
-      <td mat-footer-cell *matFooterCellDef></td>
+      <td mat-footer-cell *matFooterCellDef>
+        <div class="flex flex-col">
+          <button
+            mat-raised-button
+            class="flex flex-row-reverse bg-green-600 mx-3 text-white"
+          >
+            <span class="font-light">Pay</span>
+            <mat-icon class="ml-1">credit_card</mat-icon>
+          </button>
+        </div>
+      </td>
     </ng-container>
 
     <tr
