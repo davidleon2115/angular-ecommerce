@@ -1,4 +1,7 @@
-<mat-card class="max-w-7xl mx-auto" *ngIf="cart.items.length; else elseBlock">
+<mat-card
+  class="max-w-7xl absolute top-16 right-0 left-0 z-50 mx-auto"
+  *ngIf="cart.items.length; else elseBlock"
+>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z6 w-full">
     <ng-container matColumnDef="product">
       <th mat-header-cell *matHeaderCellDef>Product</th>
