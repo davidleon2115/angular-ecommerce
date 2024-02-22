@@ -8,27 +8,55 @@ import { Cart, CartItem } from '../../interfaces/cart.model';
 })
 export class CartComponent {
   cart : Cart = { items : [
-    // {
-    //   product : 'https://via.placeholder.com/150',
-    //   name : 'Snicker',
-    //   price : 15000,
-    //   quantity : 1,
-    //   id: 1
-    // },
-    // {
-    //   product : 'https://via.placeholder.com/150',
-    //   name : 'Snicker',
-    //   price : 15000,
-    //   quantity : 1,
-    //   id: 1
-    // },
-    // {
-    //   product : 'https://via.placeholder.com/150',
-    //   name : 'Snicker',
-    //   price : 15000,
-    //   quantity : 1,
-    //   id: 1
-    // }
+    {
+      product : 'https://via.placeholder.com/150',
+      name : 'Snicker',
+      price : 150000,
+      quantity : 10,
+      id: 1
+    },
+    {
+      product : 'https://via.placeholder.com/150',
+      name : 'Snickergfdg dfg dfg df g df g dfsg sdf gfdg ',
+      price : 15000,
+      quantity : 1,
+      id: 1
+    },
+    {
+      product : 'https://via.placeholder.com/150',
+      name : 'Snicker',
+      price : 15000,
+      quantity : 1,
+      id: 1
+    },
+    {
+      product : 'https://via.placeholder.com/150',
+      name : 'Snicker',
+      price : 15000,
+      quantity : 1,
+      id: 1
+    },
+    {
+      product : 'https://via.placeholder.com/150',
+      name : 'Snicker',
+      price : 15000,
+      quantity : 1,
+      id: 1
+    },
+    {
+      product : 'https://via.placeholder.com/150',
+      name : 'Snicker',
+      price : 15000,
+      quantity : 1,
+      id: 1
+    },
+    {
+      product : 'https://via.placeholder.com/150',
+      name : 'Snicker',
+      price : 15000,
+      quantity : 1,
+      id: 1
+    }
   ]}
   dataSource : Array<CartItem> = [];
   displayedColumns : Array<string> = [
