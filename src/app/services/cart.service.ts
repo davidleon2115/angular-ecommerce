@@ -24,6 +24,7 @@ export class CartService {
     this.cart.next({ items });
     this.showMessage(`${item.name} Product added to cart`);
     console.log(items)
+    
   }
 
   getTotal(items : Array<CartItem>) : number{
